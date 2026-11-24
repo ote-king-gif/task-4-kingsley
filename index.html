@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="form.css">
+<meta name="description" content="form design validation. lacasera">
+<title>Sign up form</title>
+</head>
+<body>
+<div class="form-container" id="formcontainer">
+    <form class="contactform" id="contactform">
+        <h1>Create your account</h1>
+        <p>Fill in the details below</p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="text" placeholder="eg.calvin king">
+         <p class="error" id="name-error"></p>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="You@example.com" required>
+         <p class="error" id="email-error"></p>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="eg.08123456778" required>
+         <p class="error" id="phone-error"></p>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 8 characters" requred>
+         <p class="error" id="password-error"></p>
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Write it again" required>
+         <p class="error" id="confirm-error"></p>
+
+       <div class="terms">
+        <label for="terms"><input type="checkbox" id="terms" required>I agree to the terms and conditions</label>
+        <p class="error" id="terms-error"></p>
+    </div>
+        <button class="firstbtn" type="submit">Submit</button>
+
+    </form>
+    <div class="success" id="successMessage" hidden>
+      <h2>Account created</h2>
+      <p id="successText"></p>
+      <button type="button" class="submit-btn" id="resetBtn">Back to homepage</button>
+    </div>
+</div>
+
+<script src="form.js"></script>
+</body>
+</html>
